@@ -1,0 +1,40 @@
+PROJECT-FAIR FRONTEND
+                    -------------------------
+
+            1.Project Creation - npx create-react-app project-fair
+            2.cd project-fair
+            3.code .
+            4. Run Project - npm start
+            5. Clear the unwanted codes
+            6. Install 3rd party libraries
+                i) React Bootstrap - npm install react-bootstrap bootstrap
+                ii) MDB Bootstrap - npm i mdb-react-ui-kit
+                iii) Fontawsome -npm i @fortawesome/fontawesome-free
+                In Index.js -
+                        import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+                        import "@fortawesome/fontawesome-free/css/all.min.css";
+                iv) Bootswatch
+                v) Google Fonts
+            7.Components Creation
+                    Pages
+                        -Home.jsx
+                        -Dashboard.jsx
+                        -Login.jsx
+                        -Registration.jsx
+                        -Project.jsx
+                        -PageNotFound.jsx
+                    Components
+                        -Header.jsx
+                        -Footer.jsx
+
+            8. Path setup
+                Installation - npm i react-router-dom
+
+                /                        home- 3000
+                /login
+                /register
+                /dashboard
+                /projects
+
+
+            9. Page Designing
