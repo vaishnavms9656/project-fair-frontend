@@ -6,6 +6,8 @@ import Row from 'react-bootstrap/esm/Row'
 import { addProjectResponseContext } from '../ContextApi/ContextShare';
 import EditProject from './EditProject'
 import { editProjectResponseContext } from '../ContextApi/ContextShare';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function MyProject() {
   const { addProjectRes, setAddProjectRes } = useContext(addProjectResponseContext)
@@ -55,7 +57,7 @@ function MyProject() {
         const result = await deleteUserProjectsAPI(pid, reqHeader)
         console.log(result);
         if (result.status === 200) {
-          alert("project deleted successfully")
+          toast.error("project deleted successfully")
           allUserProjects()
         }
       }
@@ -92,7 +94,18 @@ function MyProject() {
 
         </Row>
       </div>
-
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   )
 }
